@@ -59,7 +59,8 @@ public class SecurityConfig {
  							.loginProcessingUrl("/members/signin")//form안의 action 경로
  							.usernameParameter("email")
  							.passwordParameter("pass")
- 							.defaultSuccessUrl("/")//성공시 이동 url
+ 							.successHandler(new CustomSuccessHandler())
+ 							//.defaultSuccessUrl("/")//성공시 이동 url
  							.failureUrl("/members/signin")//실패시 이동 url
  							.permitAll()
  							)
