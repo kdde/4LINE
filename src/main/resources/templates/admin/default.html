@@ -4,13 +4,39 @@
     <th:block th:insert="~{layout/admin-layout :: head}"/>
     <!-- 해당하는 페이지의 css나 js를 아래에 적용 -->
     <link rel="stylesheet" href="/css/commons/admin-layout.css">
+    <style type="text/css">
+    	.aaa{
+    		position: absolute;
+    		left: 410px;
+    		top: 150px;
+    	}
+    	.aa{
+    		display: inline-block;
+    		width: 150px;
+    		height: 40px;
+    		text-align: center;
+    		padding-top: 7px;
+    		margin-right: 25px;
+    		background-color: rgb(134, 209, 15, 20%);
+    		border-radius: 15px;
+    		font-size: 18px;
+    		font-weight: bold;
+    		color: rgb(92, 92, 92);
+    	}
+    </style>
 </head>
 <body class="flex">
     <th:block th:insert="~{layout/admin-layout :: header}"/>
     <main>
     	<h1>메인컨텐츠</h1>
     	<div class="wrap">
-    		<p class="page">[관리자 페이지]</p>
+    		<p class="page">관리자 페이지</p>
+    		<div class="wrap aaa">
+	    		<a class="aa" href="/admin/goods/reg">상품등록</a>
+	    		<a class="aa" href="/admin/goods/list">상품리스트</a>
+	    		<a class="aa" href="/admin">주문관리</a>
+	    		<a class="aa" href="/admin/member/list">회원관리</a>
+    		</div>
     	</div>
     </main>
 </body>
